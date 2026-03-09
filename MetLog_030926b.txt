@@ -1,0 +1,16 @@
+Started Downloading the data at 2026-03-09T16:19:25.974562 and saving in MetData_030926b.wdm
+Station: Seattle, Latitude: 47.629605, Longitude: -122.348941, TimeZoneAdjustment: -8
+Constituent: ATEMP, Column Name:NLDAS_FORA0125_H_2_0_Tair:K, DSN: 1
+Constituent: PRECIP, Column Name:NLDAS_FORA0125_H_2_0_Rainf:mm, DSN: 2
+Constituent: SOLR, Column Name:NLDAS_FORA0125_H_2_0_SWdown:W/m**2, DSN: 3
+Constituent: WIND, Column Name:WIND, DSN: 4
+Station: Allahabad, Latitude: 25.43, Longitude: 81.84, TimeZoneAdjustment: 5.5
+Constituent: ATEMP, Column Name:GLDAS_NOAH025_3H_2_1_Tair_f_inst:K, DSN: 5
+Constituent: PRECIP, Column Name:GLDAS_NOAH025_3H_2_1_Rainf_f_tavg:mm/s, DSN: 6
+Constituent: SOLR, Column Name:GLDAS_NOAH025_3H_2_1_SWdown_f_tavg:W/m**2, DSN: 7
+Constituent: WIND, Column Name:GLDAS_NOAH025_3H_2_1_Wind_f_inst:m/s, DSN: 8
+Station: Asmara, Latitude: 15.33, Longitude: 38.92, TimeZoneAdjustment: 3
+Constituent: ATEMP, Column Name:GLDAS_NOAH025_3H_2_1_Tair_f_inst:K, DSN: 9
+Constituent: PRECIP, Column Name:GLDAS_NOAH025_3H_2_1_Rainf_f_tavg:mm/s, DSN: 10
+Constituent: SOLR, Column Name:GLDAS_NOAH025_3H_2_1_SWdown_f_tavg:W/m**2, DSN: 11
+Constituent: WIND, Column Name:GLDAS_NOAH025_3H_2_1_Wind_f_inst:m/s, DSN: 12
