@@ -27,7 +27,7 @@ class EmptyLDASDataError(ValueError):
 
 GLDAS_CONSTITUENT_DETAILS = {
     "PRECIP": ["Precipitation", "mm", "GLDAS2:GLDAS_NOAH025_3H_2_1_Rainf_f_tavg", "kg/m^2/s"],
-    "ATEMP": ["Air Temperature", "Celsius", "GLDAS2:GLDAS_NOAH025_3H_2_1_Tair_f_inst", "K"],
+    "ATEMP": ["Air Temperature", "Fahrenheit", "GLDAS2:GLDAS_NOAH025_3H_2_1_Tair_f_inst", "K"],
     "SOLR": ["Shortwave radiation flux", "Langleys", "GLDAS2:GLDAS_NOAH025_3H_2_1_SWdown_f_tavg", "W m-2"],
     "WIND": ["Wind Speed", "m s-1", "GLDAS2:GLDAS_NOAH025_3H_2_1_Wind_f_inst", "m s-1"],
     "CLOU": ["Cloud Cover Estimate", "Cloud Fraction", "GLDAS2:GLDAS_NOAH025_3H_2_1_SWdown_f_tavg", "W m-2"],
@@ -46,7 +46,7 @@ GLDAS_CONSTITUENT_DETAILS = {
 
 NLDAS_CONSTITUENT_DETAILS = {
     "PRECIP": ["Precipitation", "mm", "NLDAS:NLDAS_FORA0125_H_2_0_Rainf", "mm"],
-    "ATEMP": ["Air Temperature", "Celsius", "NLDAS:NLDAS_FORA0125_H_2_0_Tair", "K"],
+    "ATEMP": ["Air Temperature", "Fahrenheit", "NLDAS:NLDAS_FORA0125_H_2_0_Tair", "K"],
     "SOLR": ["Shortwave radiation flux", "Langleys", "NLDAS:NLDAS_FORA0125_H_2_0_SWdown", "W m-2"],
     "WIND": [
         "Wind Speed",
@@ -298,7 +298,7 @@ def convertunitforHSPF(constituent: str, series: pd.Series, ldas_var: str) -> pd
     series = normalize_series(series, constituent)
 
     if constituent == "ATEMP":
-        series = series - 273.15
+        series = ((series - 273.15)* 9.0 / 5.0) + 32.0 #new adjustments for farhenheit from celcius
     elif constituent == "SOLR":
         series = series * 0.0864
     elif constituent == "PRECIP" and "GLDAS" in ldas_var:
